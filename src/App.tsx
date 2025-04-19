@@ -15,7 +15,7 @@ export function App() {
         <Container>
           <Header />
           <main>
-          <Main />
+            <Main />
           </main>
         </Container>
       </PageWrapper>
@@ -28,7 +28,7 @@ function Main() {
 
   return (
     <div>
-      <Search puppies={puppies} liked={liked} />
+      <Search puppies={puppies} liked={liked} setLiked={setLiked} />
       <PuppyList puppies={puppies} liked={liked} setLiked={setLiked} />
       <NewPuppyForm />
     </div>

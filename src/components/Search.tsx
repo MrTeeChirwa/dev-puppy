@@ -1,9 +1,11 @@
+import { Dispatch, SetStateAction } from "react";
 import { Puppy } from "../types/types";
 import { Shortlist } from "./Shortlist";
 
-export function Search({ puppies, liked }: {
+export function Search({ puppies, liked, setLiked }: {
   puppies: Puppy[];
-  liked: Puppy['id'][]
+  liked: Puppy['id'][],
+  setLiked: Dispatch<SetStateAction<Puppy['id'][]>>
 }) {
   return (
     <div>
@@ -40,7 +42,7 @@ export function Search({ puppies, liked }: {
             </button>
           </div>
         </div>
-        <Shortlist puppies={puppies} liked={liked}  />
+        <Shortlist puppies={puppies} liked={liked} setLiked={setLiked} />
       </div>
     </div>
   );
